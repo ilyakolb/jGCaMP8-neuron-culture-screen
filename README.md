@@ -1,4 +1,10 @@
-FILES TO EXCLUDE FROM env yml
+## interactive multiparameter plotting (imp)
+
+To activate environemt, `conda activate imp`
+
+`jupyter notebook interactive-multiparameter-screening-plot.ipynb`
+
+### Files to exclude from compilation on binder:
   - m2w64-libwinpthread-git=5.0.0.4634.697f757
   - msys2-conda-epoch=20160418
   - pywinpty=0.5.7
