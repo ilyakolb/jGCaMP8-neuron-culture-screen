@@ -11,7 +11,7 @@ def condition_df(data_in):
 	'''
 
 	data_in = data_in.drop(columns = data_in.columns[data_in.columns.str.contains('Unnamed:')], axis=1) # drop unnamed columns
-	data_in = data_in.drop(index = ['TEOnly','TE only', 'TE-only', 'none', '376.13']) # 
+	data_in.drop(index = ['TEOnly','TE only', 'TE-only', 'none', '376.13'], inplace=True, errors='ignore') # 
 
 	# rename columns to user friendly names
 	s = data_in.columns
