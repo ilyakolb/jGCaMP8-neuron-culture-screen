@@ -1,5 +1,20 @@
 import pandas as pd 
 
+def abbreviate_construct(construct_id):
+    '''
+    abbreviate_construct: for brevity in plotting, abbreviate construct.
+    all GCaMPxx and jGCaMPxx to xx
+    all jGCaMPx.yyy to yyy
+    all XCaMP stays the same
+    '''
+    if construct_id.startswith('GCa') or construct_id.startswith('jGCa'):
+        if '.' not in construct_id:
+            return construct_id[-2:]
+        else:
+            return construct_id
+    else:
+        return construct_id
+
 def condition_df(data_in):
 	'''
 	initial conditioning of pd array imported from csv (e.g. data_all_20210203_GCaMP96uf.csv)
