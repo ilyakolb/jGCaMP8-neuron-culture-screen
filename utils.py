@@ -15,6 +15,16 @@ def abbreviate_construct(construct_id):
     else:
         return construct_id
 
+def filter_construct_range(construct_id, prefix, low, high):
+    '''
+    return whether construct_id starts with prefix and is between high and low values
+    e.g. filter_construct_range('500.123', '500', 1, 200) -> True
+    '''
+    if construct_id.startswith(prefix):
+        suffix = construct_id[construct_id.index('.')+1:]
+        return (int(suffix) > low and int(suffix) <= high)
+    return False
+
 def condition_df(data_in):
 	'''
 	initial conditioning of pd array imported from csv (e.g. data_all_20210203_GCaMP96uf.csv)
@@ -26,7 +36,7 @@ def condition_df(data_in):
 	'''
 
 	data_in = data_in.drop(columns = data_in.columns[data_in.columns.str.contains('Unnamed:')], axis=1) # drop unnamed columns
-	data_in = data_in.drop(index = ['TEOnly','TE only', 'TE-only', 'none', '376.13']) # 
+	data_in = data_in.drop(index = ['TEOnly','TE only', 'TE-only', 'none', '376.13', '514.4409', '514.1', '514.1722', '514.4445', '497.32', '497.440', '515.4', '515.3', '515.2']) # 
 
 	# rename columns to user friendly names
 	s = data_in.columns
