@@ -43,17 +43,21 @@ def condition_df(data_in):
 
 	for nAP in [1, 3, 10, 160]:
 	    # replace nFP with 'n AP'
-	    s = s.str.replace(str(nAP) + 'FP', str(nAP) + ' AP')
+	    s = s.str.replace('_' + str(nAP) + '_fp', ' ({} AP)'.format(nAP))
 	
 	# replace TimeToPeak with Time to peak
 	data_in.columns = s
-	data_in.columns = data_in.columns.str.replace('Rise', 'Half-rise time')
-	data_in.columns = data_in.columns.str.replace('Decay', 'Half-decay time')
-	data_in.columns = data_in.columns.str.replace('TimeToPeak', 'Time to peak')
-
+	data_in.columns = data_in.columns.str.replace('rise', 'Half-rise time')
+	data_in.columns = data_in.columns.str.replace('decay', 'Half-decay time')
+	data_in.columns = data_in.columns.str.replace('timetopeak', 'Time to peak')
+	data_in.columns = data_in.columns.str.replace('snr', 'SNR')
+	data_in.columns = data_in.columns.str.replace('norm_f0', 'Norm. F0')
+    
+    
 	# replace 1FP with DF/F (1FP)
-	data_in = data_in.rename(columns = {'1 AP': 'DF/F (1 AP)', '3 AP': 'DF/F (3 AP)', '10 AP': 'DF/F (10 AP)', '160 AP': 'DF/F (160 AP)',
-										'1 AP(p)': 'DF/F (1 AP)(p)', '3 AP(p)': 'DF/F (3 AP)(p)', '10 AP(p)': 'DF/F (10 AP)(p)', '160 AP(p)': 'DF/F (160 AP)(p)'})
+	data_in = data_in.rename(columns = {'1_fp': 'DF/F (1 AP)', '3_fp': 'DF/F (3 AP)', '10_fp': 'DF/F (10 AP)', '160_fp': 'DF/F (160 AP)',
+										'1_fp_p': 'DF/F (1 AP)_p', '3_fp_p': 'DF/F (3 AP)_p', '10_fp_p': 'DF/F (10 AP_p', '160_fp_p': 'DF/F (160 AP)_p'})
+    
 
 	# remove NaNs
 	data_in.dropna(axis = 0, how = 'any')
