@@ -1,8 +1,11 @@
 ## jGCaMP8 neuronal culture screening results and plots
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ilyakolb/jGCaMP8-neuron-culture-screen/HEAD)
+
+**The quickest way to reproduce the plots in the manuscript is using the Binder notebook link above**
 
 The notebooks here can be used to generate the plots from the jGCaMP8 article.
 
-**The executable version of this code is also available as a [Binder notebook](https://mybinder.org/v2/gh/ilyakolb/jGCaMP8-neuron-culture-screen/HEAD?labpath=interactive-multiparameter-screening-plot.ipynb)**
+
 
 
 Instructions for reproducing the plots are below.
