@@ -10,7 +10,7 @@ The notebooks here can be used to generate the plots from the jGCaMP8 article.
 
 Instructions for reproducing the plots are below.
 
-To activate the relevant Anaconda environemt, execute `conda activate jgcamp8-culture`
+To activate the relevant Anaconda environment, execute `conda activate jgcamp8-culture`
 
 **Figure 1B**
 
