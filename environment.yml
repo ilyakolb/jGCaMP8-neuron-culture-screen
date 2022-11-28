@@ -4,20 +4,20 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - ipywidgets
-  - jupyter_client
-  - jupyter_core
-  - jupyterlab_pygments
-  - jupyterlab_widgets
-  - matplotlib
-  - numpy
-  - pandas
-  - plotly
+  - ipywidgets=7.6.3
+  - jupyter_client=6.1.12
+  - jupyter_core=4.7.1
+  - jupyterlab_pygments=0.1.2
+  - jupyterlab_widgets=1.0.0
+  - matplotlib=3.3.4
+  - numpy=1.20.2
+  - pandas=1.2.5
+  - plotly=4.14.3
   - plotly-orca
   - python=3.8.10
-  - scikit-learn
-  - scikit-posthocs
-  - scipy
-  - seaborn
+  - scikit-learn=0.24.2
+  - scikit-posthocs=0.6.7
+  - scipy=1.6.2
+  - seaborn=0.11.1
   - voila
 prefix: C:\Users\kolbi\Anaconda3\envs\jgcamp8-screen
